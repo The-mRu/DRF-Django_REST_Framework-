@@ -9,6 +9,7 @@ from rest_framework.parsers import JSONParser
 
 # Create your views here.
 
+#Serializer
 #QuerySet
 def demo_info(request):
     #complex data
@@ -23,6 +24,7 @@ def demo_info(request):
     #Json sent to user
     return HttpResponse(json_data, content_type='application/json')
 
+#Serializer
 
 #Model Instance 
 def demo_ins(request,pk):
@@ -38,6 +40,9 @@ def demo_ins(request,pk):
     #Json sent to user
     return HttpResponse(json_data, content_type='application/json')
 
+
+#DeSerializer
+
 @csrf_exempt
 def demo_create(request):
     if request.method == 'POST':
@@ -48,7 +53,7 @@ def demo_create(request):
         python_data=JSONParser().parse(stream)
         #python to complex
         serializer=demoSerializer(data=python_data)
-        if serializer.is_valid:
+        if serializer.is_valid():
             serializer.save()
             res ={'msg': 'Successfully insert data'}
             json_data=JSONRenderer().render(res)

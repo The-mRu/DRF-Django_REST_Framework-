@@ -8,5 +8,5 @@ class demoSerializer(serializers.Serializer):
     seat=serializers.IntegerField()
 
     def create(self, validated_data ):
-        return demo.object.create(**validated_data)
+        return demo.objects.create(**validated_data)
         

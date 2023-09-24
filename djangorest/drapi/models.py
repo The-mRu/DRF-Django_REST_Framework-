@@ -6,3 +6,4 @@ class demo(models.Model):
     course_name = models.CharField(max_length=30)
     course_duration =models.IntegerField()
     seat=models.IntegerField()
+    
