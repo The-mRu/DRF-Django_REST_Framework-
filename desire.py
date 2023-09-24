@@ -8,7 +8,7 @@ data={
     'Name':'kasfi',
     'course_name':'ML',
     'course_duration':30,
-    'seat':'20',
+    'seat':20,
 }
 
 json_data=json.dumps(data)
