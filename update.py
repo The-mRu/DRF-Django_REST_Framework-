@@ -5,9 +5,9 @@ URL= "http://127.0.0.1:8000/demoCreate/"
 
 
 data={
-    'id':4,
-    'Name':'Md Sayeem',
-    'course_name':'Web development' ,
+    'id':6,
+    'Name':'Mayeen',
+    'course_name':'Algo' ,
     'seat':'50'
     
     
