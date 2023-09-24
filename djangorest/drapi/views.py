@@ -77,7 +77,22 @@ def demo_create(request):
           return HttpResponse(json_data,content_type='application.json')
         json_data=JSONRenderer().render(serializer.errors)   
         return HttpResponse(json_data,content_type='application.json')
-        
+    
+    if request.method=='DELETE':
+        json_data = request.body
+        #Json to stream convert
+        stream = io.BytesIO(json_data)
+        #stream to python
+        python_data = JSONParser().parse(stream) 
+        id = python_data.get('id')
+        check_deleted_demo_id = demo.objects.get(id=id)
+        check_deleted_demo_id.delete()
+        res ={'msg': 'Successfully Update data'}
+        json_data=JSONRenderer().render(res)
+        return HttpResponse(json_data,content_type='application.json')
 
         
+                
+        
+                
         

@@ -1,0 +1,5 @@
+virtual environment settings 
+
+Get-ExecutionPolicy
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\Activate.ps1
