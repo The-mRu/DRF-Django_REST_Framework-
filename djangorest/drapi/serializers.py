@@ -1,6 +1,16 @@
+
 from rest_framework import serializers
 from .models import demo
 
+# Using ModelSerializer
+class demoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = demo
+        fields = ['Name', 'course_name', 'course_duration', 'seat']
+
+# OR
+
+'''
 class demoSerializer(serializers.Serializer):
     Name =serializers.CharField(max_length=30)
     course_name = serializers.CharField(max_length=30)
@@ -20,3 +30,4 @@ class demoSerializer(serializers.Serializer):
         
         instance.save()
         return instance
+# '''

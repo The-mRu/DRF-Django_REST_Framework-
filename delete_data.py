@@ -7,7 +7,7 @@ URL= "http://127.0.0.1:8000/demoCreate/"
 
 
 data={
-    'id':'6'
+    'id':'9'
 }
 
 json_data=json.dumps(data)

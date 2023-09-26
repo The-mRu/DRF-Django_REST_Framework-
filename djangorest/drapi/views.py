@@ -45,7 +45,7 @@ def demo_ins(request,pk):
 
 @csrf_exempt
 def demo_create(request):
-    if request.method == 'POST':
+    if request.method == 'POST': #insert_data
         json_data=request.body
         #Json to stream convert
         stream=io.BytesIO(json_data)
@@ -61,7 +61,7 @@ def demo_create(request):
         json_data=JSONRenderer().render(serializer.errors)   
         return HttpResponse(json_data,content_type='application.json')
     
-    if request.method =='PUT':
+    if request.method =='PUT': #update_data
         json_data = request.body
         #Json to stream convert
         stream = io.BytesIO(json_data)
@@ -78,7 +78,7 @@ def demo_create(request):
         json_data=JSONRenderer().render(serializer.errors)   
         return HttpResponse(json_data,content_type='application.json')
     
-    if request.method=='DELETE':
+    if request.method=='DELETE': #delete_data
         json_data = request.body
         #Json to stream convert
         stream = io.BytesIO(json_data)

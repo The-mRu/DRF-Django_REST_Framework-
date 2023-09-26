@@ -7,10 +7,9 @@ URL= "http://127.0.0.1:8000/demoCreate/"
 
 
 data={
-    'id':4,
-    'Name':'Sayeem',
-    'course_name':'Web development' ,
-    'seat':'50'
+    #add only update fields name
+    'id':10,
+    'Name':'GS Tasin',
     
     
 }
